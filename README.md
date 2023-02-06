@@ -5,7 +5,9 @@ The App also provides SAT Scores for the NYC Schools
 
 ## Installation
 
-Use Android Studio to build App (Electric Eel Recommended)
+1. Use Android Studio to build App (Electric Eel Recommended)
+2. Java 11 
+3. Gradle 7.4.2
 
 ## Features
 1. Display list of Schools (Supports both landscape & portrait orientation)
