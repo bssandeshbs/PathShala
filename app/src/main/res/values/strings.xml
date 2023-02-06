@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Pathshala</string>
+    <string name="title_home">Pathshala</string>
+    <string name="unknown_error">Unknown</string>
+    <string name="no_data_available">No Data Available</string>
+    <string name="sat_critical_writing_avg">SAT Critical Writing (Avg) -</string>
+    <string name="sat_critical_reading_avg">SAT Critical Reading (Avg) -</string>
+    <string name="sat_math_score_avg">SAT Math Score (Avg) -</string>
+    <string name="sat_test_takers">SAT Test Takers -</string>
+    <string name="loading_school_scores">Loading School Scores</string>
+    <string name="neighbourhood">Neighbourhood:</string>
+    <string name="city">City:</string>
+    <string name="website">Website:</string>
+    <string name="final_grades">Final Grades:</string>
+    <string name="no_network">Cannot connect to internet! Check your Wifi or Mobile Network!</string>
+    <string name="something_went_wrong">Something went wrong! Please try again later!</string>
+    <string name="generic_error">Oops, we are running into issues!</string>
+
+</resources>

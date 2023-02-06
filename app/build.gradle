@@ -1,0 +1,108 @@
+apply plugin: "com.android.application"
+apply plugin: "kotlin-android"
+apply plugin: "kotlin-kapt"
+apply plugin: "kotlin-parcelize"
+apply plugin: "androidx.navigation.safeargs.kotlin"
+
+android {
+    compileSdkVersion 33
+
+    defaultConfig {
+        applicationId "com.nyc.schools"
+        minSdkVersion 25
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$versions.coroutinesCore"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$versions.coroutinesAndroid"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-play-services:$versions.coroutinesPlay"
+
+    implementation "androidx.appcompat:appcompat:$versions.appCompat"
+    implementation "androidx.constraintlayout:constraintlayout:$versions.constraintLayout"
+    implementation "androidx.core:core-ktx:$versions.coreKtx"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$versions.lifecycle"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$versions.lifecycle"
+    implementation "androidx.lifecycle:lifecycle-extensions:$versions.lifecycle_ext"
+
+    implementation "androidx.navigation:navigation-fragment-ktx:$versions.navigation"
+    implementation "androidx.navigation:navigation-ui-ktx:$versions.navigation"
+
+    implementation "androidx.recyclerview:recyclerview:$versions.recyclerView"
+    implementation "androidx.room:room-runtime:$versions.room"
+    kapt "androidx.room:room-compiler:$versions.room"
+    implementation "androidx.room:room-ktx:$versions.room"
+    implementation "com.romainpiel.shimmer:library:$versions.shimmer"
+
+    implementation "com.google.android.material:material:$versions.material"
+    kapt "com.google.dagger:dagger-compiler:$versions.dagger"
+    kapt "com.google.dagger:dagger-android-processor:$versions.dagger"
+    implementation "com.google.dagger:dagger-android-support:$versions.dagger"
+
+    implementation "com.squareup.retrofit2:retrofit:$versions.retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$versions.retrofit"
+
+    implementation "com.squareup.okhttp3:logging-interceptor:$versions.okhttpInterceptor"
+    implementation "com.google.code.gson:gson:$versions.gson"
+
+    testImplementation "junit:junit:$versions.junit"
+    testImplementation group: 'org.mockito', name: 'mockito-core', version: '2.23.0'
+    testImplementation "androidx.arch.core:core-testing:$versions.coreTesting"
+    testImplementation("io.mockk:mockk:$versions.mockk") {
+        exclude group: 'org.jetbrains.kotlin', module: 'kotlin-reflect'
+    }
+    testImplementation "io.mockk:mockk-agent-jvm:$versions.mockk"
+    testImplementation "org.robolectric:robolectric:$versions.robolectric"
+
+    androidTestImplementation("io.mockk:mockk-android:$versions.mockk") {
+        exclude group: 'org.jetbrains.kotlin', module: 'kotlin-reflect'
+        exclude group: 'org.jetbrains.kotlin', module: 'kotlin-stdlib-common'
+        exclude group: 'org.jetbrains.kotlin', module: 'kotlin-stdlib'
+
+    }
+
+    implementation "androidx.test.espresso:espresso-idling-resource:$versions.espressoCore"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$versions.espressoCore"
+    androidTestImplementation "androidx.test:core:$versions.testCoreVersion"
+    androidTestImplementation "androidx.test:core-ktx:$versions.testCoreVersion"
+    androidTestImplementation "androidx.test:runner:$versions.testCoreVersion"
+    androidTestImplementation "androidx.test.ext:junit:$versions.extJUnitVersion"
+    androidTestImplementation "androidx.test.ext:junit-ktx:$versions.extJUnitVersion"
+    implementation "org.jetbrains.kotlin:kotlin-reflect:$versions.kotlin"
+
+    androidTestImplementation "com.google.code.gson:gson:$versions.gson"
+    androidTestImplementation "com.squareup.retrofit2:retrofit:$versions.retrofit"
+    androidTestImplementation("com.squareup.retrofit2:converter-protobuf:$versions.retrofit") {
+        transitive = false
+    }
+    androidTestImplementation "androidx.test:rules:$versions.testRules"
+    androidTestImplementation "com.squareup.retrofit2:converter-gson:$versions.retrofit"
+    androidTestImplementation "androidx.test.espresso:espresso-intents:$versions.espressoIntents"
+    androidTestImplementation "com.android.support.test.espresso:espresso-contrib:$versions.espressoContrib"
+    androidTestImplementation "androidx.arch.core:core-testing:$versions.coreTesting"
+    androidTestImplementation "com.google.dagger:dagger-android-support:$versions.dagger"
+    androidTestImplementation('androidx.test.espresso:espresso-web:3.4.0')
+
+    androidTestImplementation "androidx.work:work-testing:$versions.work"
+
+    kaptAndroidTest "com.google.dagger:dagger-compiler:$versions.dagger"
+    androidTestImplementation "com.squareup.spoon:spoon-client:$versions.spoonclient"
+    testImplementation ("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.1") {
+        // https://github.com/Kotlin/kotlinx.coroutines/tree/master/kotlinx-coroutines-debug#debug-agent-and-android
+        exclude group: "org.jetbrains.kotlinx", module: "kotlinx-coroutines-debug"
+    }
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F9DEDC</color>
+    <color name="onColorPrimary">#633B48</color>
+    <color name="onToolbarColor">#8C1D18</color>
+    <color name="colorPrimaryDark">#49454F</color>
+    <color name="tertiaryContainer">#F9DEDC</color>
+    <color name="onTertiaryContainer">#633B48</color>
+    <color name="primaryWhite">#FFFFFF</color>
+    <color name="dividerGrey">#d1d1d1</color>
+    <color name="colorAccent">#8C1D18</color>
+</resources>

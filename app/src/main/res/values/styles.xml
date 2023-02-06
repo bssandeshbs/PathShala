@@ -1,0 +1,71 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="LoadingIndicator">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/onToolbarColor</item>
+    </style>
+
+    <style name="PageHeaderTextView">
+        <item name="android:maxLines">3</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="PageTitleTextView">
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_marginTop">14dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/onTertiaryContainer</item>
+    </style>
+
+    <style name="PageContentTextView">
+        <item name="android:layout_marginStart">2dp</item>
+        <item name="android:layout_marginTop">14dp</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">@color/onTertiaryContainer</item>
+    </style>
+
+    <style name="RowHeaderTextView">
+        <item name="android:maxLines">2</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textSize">19sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="RowTitleTextView">
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/onTertiaryContainer</item>
+    </style>
+
+    <style name="RowContentTextView">
+        <item name="android:layout_marginStart">2dp</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:layout_marginEnd">12dp</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">@color/onTertiaryContainer</item>
+    </style>
+
+</resources>

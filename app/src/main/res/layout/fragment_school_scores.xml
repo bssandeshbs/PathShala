@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        tools:context=".ui.SchoolListFragment">
+
+        <com.romainpiel.shimmer.ShimmerTextView
+            android:id="@+id/shimmer"
+            style="@style/LoadingIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/loading_school_scores"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scores_content_view"
+        android:visibility="visible"
+        android:background="@color/colorPrimary"
+        tools:context=".ui.SchoolListFragment">
+
+        <TextView
+            android:id="@+id/school_name"
+            style="@style/PageHeaderTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="This is a small school" />
+
+        <TextView
+            android:id="@+id/description"
+            style="@style/PageTitleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="12"
+            android:ellipsize="end"
+            android:paddingBottom="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/school_name"
+            tools:text="Description Description Description Description Description Description Description" />
+
+        <TextView
+            android:id="@+id/sat_test_takers_title"
+            style="@style/PageTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sat_test_takers"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/description"
+            tools:text="SAT Test Takers: " />
+
+        <TextView
+            android:id="@+id/sat_test_takers"
+            style="@style/PageContentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/sat_test_takers_title"
+            app:layout_constraintTop_toBottomOf="@+id/description"
+            tools:text="444" />
+
+        <TextView
+            android:id="@+id/sat_math_avg_score_title"
+            style="@style/PageTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sat_math_score_avg"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sat_test_takers_title"
+            tools:text="SAT Math Score (Avg) - " />
+
+        <TextView
+            android:id="@+id/sat_math_avg_score"
+            style="@style/PageContentTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/onTertiaryContainer"
+            app:layout_constraintStart_toEndOf="@+id/sat_math_avg_score_title"
+            app:layout_constraintTop_toBottomOf="@+id/sat_test_takers_title"
+            tools:text="200" />
+
+        <TextView
+            android:id="@+id/sat_critical_reading_score_title"
+            style="@style/PageTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sat_critical_reading_avg"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sat_math_avg_score"
+            tools:text="SAT Critical Reading (Avg) - " />
+
+        <TextView
+            android:id="@+id/sat_critical_reading_score"
+            style="@style/PageContentTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/sat_critical_reading_score_title"
+            app:layout_constraintTop_toBottomOf="@+id/sat_math_avg_score"
+            tools:text="223" />
+
+        <TextView
+            android:id="@+id/sat_writing_score_title"
+            style="@style/PageTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sat_critical_writing_avg"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sat_critical_reading_score"
+            tools:text="SAT Critical Reading (Avg) - " />
+
+        <TextView
+            android:id="@+id/sat_writing_score"
+            style="@style/PageContentTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="12dp"
+            android:singleLine="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/sat_writing_score_title"
+            app:layout_constraintTop_toBottomOf="@+id/sat_critical_reading_score"
+            tools:text="223" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="20dp"
+    app:cardPreventCornerOverlap="false">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/tertiaryContainer">
+
+        <TextView
+            android:id="@+id/school_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/RowHeaderTextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="This is a smart school" />
+
+        <TextView
+            android:id="@+id/neighbourhood_title"
+            style="@style/RowTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:text="@string/neighbourhood"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/school_name"
+            tools:text="Onandago" />
+
+        <TextView
+            android:id="@+id/neighbourhood"
+            style="@style/RowContentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/neighbourhood_title"
+            app:layout_constraintTop_toBottomOf="@+id/school_name"
+            tools:text="Onandago" />
+
+        <TextView
+            android:id="@+id/city_title"
+            style="@style/RowTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/city"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/neighbourhood"
+            tools:text="City" />
+
+        <TextView
+            android:id="@+id/city"
+            style="@style/RowContentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/city_title"
+            app:layout_constraintTop_toBottomOf="@+id/neighbourhood"
+            tools:text="Syracuse" />
+
+        <TextView
+            android:id="@+id/website_title"
+            style="@style/RowTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/website"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/city"
+            tools:text="Syracuse.com" />
+
+        <TextView
+            android:id="@+id/website"
+            style="@style/RowContentTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:paddingBottom="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/website_title"
+            app:layout_constraintTop_toBottomOf="@+id/city"
+            tools:text="www.syracuse.com" />
+
+        <TextView
+            android:id="@+id/final_grades_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="6dp"
+            android:text="@string/final_grades"
+            android:textColor="@color/onTertiaryContainer"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/website"
+            tools:text="Final Grades" />
+
+        <TextView
+            android:id="@+id/final_grades"
+            style="@style/RowContentTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/final_grades_title"
+            app:layout_constraintTop_toBottomOf="@+id/website"
+            tools:text="www.syracuse.com" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
