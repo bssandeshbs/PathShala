@@ -22,9 +22,10 @@ Use Android Studio to build App (Electric Eel Recommended)
 ## Framework components used
 
 1. Kotlin Programming Language with MVVM design pattern
-2. Coroutines 
-3. Room Database
-4. ViewModel
-5. LiveData
-6. Retrofit for API call
-7. Open source libraries
+2. Dagger for Dependency Injection
+3. Coroutines for background threads
+4. Room Database for local storage
+5. ViewModel for caching 
+6. LiveData for making view lifecycle aware
+7. Retrofit for REST API calls
+8. Open source libraries
